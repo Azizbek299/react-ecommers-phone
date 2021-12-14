@@ -1,38 +1,346 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Oswald", sans-serif;
+  /* font-family: "Permanent Marker", cursive; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar__container {
+  background: #f1f2f6;
+  height: 200vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav__menu {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  padding: 10px;
+  background: #74b9ff;
+}
+
+.home__link {
+  margin-right: 50px;
+}
+
+.product__menu {
+  margin-left: 10%;
+  font-size: 25px;
+}
+
+.product__menu a {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.cart__menu {
+  margin-right: 5%;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  padding: 8px;
+  border-radius: 7px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.productList__container {
+  margin-top: 50px;
 }
+
+.productList__title {
+  font-family: "Permanent Marker", cursive;
+  font-size: 35px;
+  text-align: center;
+  display: block;
+}
+
+.product__container {
+  box-sizing: border-box;
+  width: 90%;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 40px;
+  position: relative;
+}
+
+.product__box {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.product__box-img {
+  margin-top: 30px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.product__box-img img {
+  width: 60%;
+  transition-duration: 1s;
+}
+
+.cart__img {
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  padding: 0px 15px;
+  transition-duration: 0.7s;
+  border-radius: 5px;
+  background: #1e90ff;
+  border: none;
+}
+
+.in__cart {
+  font-size: 16px;
+  color: white;
+  width: 80px;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  padding: 10px 15px;
+  transition-duration: 0.7s;
+  border-radius: 5px;
+  background: #1e90ff;
+  border: none;
+}
+
+.kerakli:hover .kerakli__img {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.kerakli:hover .cart__img {
+  transform: translate(-60px, -40px);
+  cursor: pointer;
+}
+
+.kerakli:hover .in__cart {
+  transform: translate(-80px, -38px);
+  cursor: pointer;
+}
+
+.product__content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.product__content-title {
+  font-size: 20px;
+}
+
+.product__content-price {
+  font-size: 23px;
+}
+
+/*****************   Detail   **************/
+
+.detail__box-title {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 100px;
+  color: #535c68;
+}
+
+.detail__box {
+  display: flex;
+  margin: 70px auto;
+  width: 40%;
+}
+
+.detail__box-content-title {
+  font-size: 30px;
+}
+
+.detail__box-content-company {
+  font-family: "Permanent Marker", cursive;
+  font-size: 20px;
+  color: #808e9b;
+  margin-top: 10px;
+}
+
+.detail__box-content-price {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #1e3799;
+}
+
+.detail__box-content-info {
+  color: #7f8fa6;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.detail__box-content-info span {
+  color: #000;
+}
+
+.detail__box-content-btns {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail__inCart {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  border: 2px solid #0097e6;
+  color: #0097e6;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/************  Modal  **************/
+
+.modal__main__container {
+  position: absolute;
+  width: 99vw;
+  height: 150vh;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  text-align: center;
+}
+
+.modal__container {
+  font-size: 25px;
+  width: 25%;
+  margin: 2% auto;
+  background: white;
+  border-radius: 15px;
+}
+
+.modal__box-title {
+  margin-top: 50px;
+}
+
+.modal__box-img img {
+  width: 75%;
+}
+
+.modal__box-price {
+  margin-top: 15px;
+  color: #808e9b;
+}
+
+.modal__box-continue-btn button {
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  border: 2px solid #0097e6;
+  color: #0097e6;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal__box-go-to-cart-btn button {
+  margin: 25px auto;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  border: 2px solid #0097e6;
+  color: #0097e6;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/***********  Cart   ****************/
+.cartItem__container {
+  margin-top: 50px;
+}
+
+.empty__container {
+  margin-top: 50px;
+}
+
+
+.cartItem__content {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 20px;
+  padding: 10px 2%;
+  color: #57606f;
+  margin-top: 70px;
+}
+
+.cartItem__content > div {
+  text-align: center;
+}
+
+.cartItem__container-box {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  text-align: center;
+  padding: 10px 1%;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.cartItem__container-box-img img {
+  width: 25%;
+}
+
+
+.cartItem__container-box-quantity-minus {
+  margin-right: 20px;
+  padding: 0px 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.cartItem__container-box-quantity-number {
+  margin-right: 20px;
+}
+
+.cartItem__container-box-quantity-plus {
+  padding: 0px 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.cartItem__container-box-remove button {
+  font-size: 40px;
+  color: red;
+  height: 70px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.cartItem__container-purchase-box {
+  display: grid;
+  justify-content: end;
+  grid-row-gap: 10px;
+  padding-right: 10%;
+  font-size: 20px;
+  margin-top: 70px;
+}
+
+
+.cartItem__container-purchase-box-clearCart button {
+  border: 2px solid red;
+  padding: 10px 30px;
+  font-weight: bold;
+  font-size: 17px;
+  color: red;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cartItem__container-purchase-box-a {
+  margin-top: 20px;
+  display: flex;
+}
+
+.cartItem__container-purchase-box-su {
+  font-family: "Permanent Marker", cursive;
+  margin-right: 15px;
+}
+
+
+
