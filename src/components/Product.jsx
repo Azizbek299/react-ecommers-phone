@@ -11,7 +11,7 @@ export default function Product(props) {
   return (
     <div className="product__box">
       <div className="product__box-img kerakli">
-        <Link to={`/detail/${props.product.id}`}>
+        <Link to={`/detail/${props.product.id}`}>       // Бир пайтни узида Link оркали хам id ни жунатяпти хамда пастда Onclick оркали id ни SetDetail киляпти
           <img onClick={() => showDetail(props.product.id)} className="kerakli__img" src={props.product.img} alt="product" />
         </Link>
         {props.product.inCart ? (
